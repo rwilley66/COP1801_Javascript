@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Module 04 Course Project</title>
+    <script src="script.js" defer></script>
+    <!-- <link rel="stylesheet" href="main.css"> -->
+    <link rel="stylesheet" href="themes/myTheme.css" />
+    <link rel="stylesheet" href="themes/myTheme.min.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+
+    <div data-role="page" data-theme="d">
+        <div data-role="header">
+            <h1>Module 04 Course Project</h1>
+        </div>
+        <div data-role="main" class="ui-content">
+            <div id="mainPage">
+                <form name="displayText">
+                    Enter your text:
+                    <input type="text" name="textInput">
+                    <br />
+                    Choose a color:
+                    <select name="textColor">
+                        <option value="red">Red</option>
+                        <option value="green">Green</option>
+                        <option value="blue">Blue</option>
+                    </select>
+                    <br /><br />
+                    <input type="button" value="Submit" onClick="process()">
+                    <br /><br />
+                </form>
+            </div>
+            <table>
+                <tr>
+                    <td><div class="returnedLabel"></div></td>
+                    <td><div class="returnedResult"></div></td>
+                </tr>
+            </table>
+        </div>
+        <div data-role="footer">
+            <h2>Randy Willey 2018</h2>
+        </div>
+    </div>
+
+</body>
+
+</html>
