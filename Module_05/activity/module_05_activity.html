@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+    <h4>Module 05 Activity - Accessing Form Fields</h4>
+
+    <form id="contact" action="submit.php">
+
+        <table>
+
+            <tr><td>First Name:</td><td><input type="text" name="fname" value="John"></td></tr>
+            <tr><td>Last Name:</td><td><input type="text" name="lname" value="Smith"></td></tr>
+            <tr><td>Address:</td><td><input type="text" name="address" value="123 Main Street"></td></tr>
+            <tr><td>City:</td><td><input type="text" name="city" value="Tampa"></td></tr>
+            <tr><td>State:</td><td><input type="text" name="state" value="FL"></td></tr>
+            <tr><td></td><td><input type="submit" value="Submit"></td></tr>
+
+        </table>
+
+    </form>
+
+    <p>Click the "Get Field Data" button to display the content of the form fields.</p>
+
+    <button onclick="dataFunction()">Get Field Data</button>
+
+    <p id="fieldData"></p>
+
+    <script>
+    function dataFunction() {
+        var dataOut = "";
+        for (i = 0; i < 5; i++) {
+            dataOut += document.getElementById("contact").elements[i].value + "<br />";
+            document.getElementById("fieldData").innerHTML = dataOut;
+        }
+    }
+    </script>
+
+</body>
+
+</html>
