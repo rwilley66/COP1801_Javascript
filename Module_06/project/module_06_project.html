@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <style>
+
+        table {
+            width:60%;
+        }
+
+        td {
+            padding-top: 3px;
+            padding-bottom: 3px;
+            padding-left: 5px;
+            padding-right: 5px;
+            background-color: #d6d6d6;
+        }
+
+        .td-first {
+            background-color: #ffffff;
+        }
+
+        .normal {
+            font-weight: normal;
+            color: black;
+        }
+
+        .hover {
+            font-weight: bold;
+            color: #303AB7;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h4>Module 05 Activity - Accessing Form Fields</h4>
+
+    <form id="contact" action="submit.php">
+
+        <table>
+
+            <tr><td class="td-first">First Name:</td><td class="td-first"><input type="text" name="fname" value="John"></td></tr>
+            <tr><td class="td-first">Last Name:</td><td class="td-first"><input type="text" name="lname" value="Smith"></td></tr>
+            <tr><td class="td-first">Address:</td><td class="td-first"><input type="text" name="address" value="123 Main Street"></td></tr>
+            <tr><td class="td-first">City:</td><td class="td-first"><input type="text" name="city" value="Tampa"></td></tr>
+            <tr><td class="td-first">State:</td><td class="td-first"><input type="text" name="state" value="FL"></td></tr>
+            <tr><td class="td-first"></td><td class="td-first"><input type="submit" value="Submit"></td></tr>
+
+        </table>
+
+    </form>
+
+    <p>Click the "Get Field Data" button to display the content of the form fields.</p>
+
+    <button onclick="dataFunction()">Get Field Data</button>
+
+    <p id="fieldData"></p>
+
+    <script>
+    function dataFunction() {
+        var dataOut = "The form above contains the following data:<br /><br />";
+        dataOut += "<table><tr><th>First Name</th><th>Last Name</th><th>Address</th><th>City</th><th>State</th></tr><tr>"
+        for (i = 0; i < 5; i++) {
+            dataOut += "<td onmouseover=\"this.className='hover';\" onmouseout=\"this.className='normal';\">" + document.getElementById("contact").elements[i].value + "</td>";
+        }
+        dataOut += "</tr></table>";
+        document.getElementById("fieldData").innerHTML = dataOut;
+    }
+    </script>
+
+</body>
+
+</html>
