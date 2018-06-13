@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Perform Calculation</title>
+    <script src="script.js"></script>
+    <!--<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="jquery.validate.js"></script>-->
+</head>
+
+<body>
+
+<h2>Area Calculator</h2>
+
+<p>To calculate the area of a cylinder, enter the requested values in the form below.</p>
+
+<form action="" id="calcArea" name="calcArea">
+    Enter radius:<br />
+    <input type="text" name="radius" id="radius" required><br /><br />
+    Enter height:<br />
+    <input type="text" name="height" id="height" required><br /><br />
+    <button onclick="calculateResult()">Calculate</button>
+    <br />
+    <div id="resultDisplay"></div>
+</form>
+<br />
+<p id="resultDisplay"></p>
+
+</body>
+
+</html>
